@@ -4,8 +4,6 @@
 
 ## 常规部署
 
-## 部署
-
 ```bash
 $ ./server MACHINE_ID PORT
 ```
