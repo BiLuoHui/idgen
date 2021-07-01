@@ -5,6 +5,8 @@
 ## 常规部署
 
 ```bash
+$ cd cmd/server
+$ go build -o server
 $ ./server MACHINE_ID PORT
 ```
 
@@ -12,4 +14,29 @@ $ ./server MACHINE_ID PORT
 
 ```bash
 $ ./server 1 8080
+```
+
+验证
+
+```bash
+$ cd cmd/client
+$ go build -o client
+$ ./clent 127.0.0.1:8080
+```
+
+## Docker 部署
+
+构建镜像
+```bash
+$ sudo docker build -t idgen:v1.0 .
+```
+
+查看构建好的本地镜像
+```bash
+$ sudo docker image ls | grep idgen
+```
+
+运行容器
+```bash
+$ sudo docker run idgen:v1.0
 ```
